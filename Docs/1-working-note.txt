@@ -1,0 +1,229 @@
+
+
+2020.7.15 23:25
+?? mosbus:OpenMbsSocket() open fail will throw exit APP, but lib_vd2 wont, why?
+
+	>> try-catch user codding throw
+
+>> DO, DI
+
+? Why same packet send 2 times ?
+	Flag error?
+
+? --> set debug info ?   how ?
+
+?vd_ioi1 run !POL 1st time
+	!POL  didplay Error
+		Debug> CallBack: OnRcvVdMsg :Array
+		(
+		    [DstVD] => IOI1
+		    [SrcVD] => IOI1
+		    [Type] => -
+		    [Mesg] => POL
+		)
+		MSG> Error> Rsp Pack TxID return Error.[294]
+		Error Msg:[2]ILLEGAL DATA ADDRESS.
+		Snd:[1,38,0,0,0,6,1,4,0,0,0,3]
+		Rsp:[1,38,0,0,0,3,1,132,2]
+
+		MSG> Error> Rsp Pack TxID return Error.[294]
+		Error Msg:[2]ILLEGAL DATA ADDRESS.
+		Snd:[1,38,0,0,0,6,1,4,0,0,0,3]
+		Rsp:[1,38,0,0,0,3,1,132,2]
+設定重送到10次以上看看。
+
+
+
+done> Test AI/AO
+
+----
+done> ACK or ACK-
+
+ flow ctrl test.
+done> SET all VD cmd to 4 Byte?   -- Set to 3 byte, DONE
+
+
+
+MOXA E1210 16DI {2nd RJ 45 }
+Polling 10 Times AVG=0.023 sec  (0.414-0.178)
+
+
+v Test blink >> IOO1 do blink
+v test blink >> WSS1 -> WED1 blink.
+------
+BC=
+	Select DB, Get loc_id , qty_toput
+	LTA-
+		if same loc_id
+			SDOxx*
+		else
+			SDOxx+
+	NBRnn ... qty_toput
+
+
+	Select from where not done
+	and set sid for update table.
+
+DI=
+	set var_flag +/-
+	if Matched
+		if loc_id YES
+			Update DB, set qty_done	, timemark
+				update where sid
+
+
+			LAT-      //ALR-
+			NBR -
+
+			tmr_blink off
+			Prev_loc_id <<
+
+
+
+			v 三次 blink off
+		else loc_id error
+			ALR+
+
+
+
+
+PTWBGN
+	set PTW_MODE = 'PTM1'
+
+
+PTWEND
+	check short
+	confirm ?
+		maarkr all not done is Short.
+
+>>>>
+v 重複刷BC=
+	LTA-
+	SDOxx +
+
+
+
+
+
+[WSS]
+1.Auto ReOpen Done. --Done
+2.WS Web -> WSS, send失敗處理。
+3.Web : 文字顯示 x y 軸感應器 "B" , "3".
+	DIX: 1~5
+	DIY: A~D
+DI=			:	DI status, A~D, 1~5 , ex:DI=A+ , DI=B... DI=1 ... DI=2 ... DI=5
+				Reset(invisible) when LTE-.
+				for Debugging.
+
+"LTE-B3"
+
+Todo
+
+TPL1 *NPT1-555
+NPT1 ctrl-c
+TPL1 *NPT1-555  會Lost 一次，？？ How check connect.
+
+v2.24 無效，都是dbg_print 的位置。
+
+V2.25
+stream_get_meta_data
+改成兩種模式
+不然log太多...
+
+check
+stream_socket_shutdown
+stream_get_meta_data
+
+
+
+
+
+
+var Addr_codeX = "3" ;
+var Addr_codeY = "B" ;
+//object.style.visibility = "visible|hidden|
+document.getElementById("di_"+  Addr_codeX  + "x").style.visibility = "hidden";
+document.getElementById("di_"+  Addr_codeX  + "y").style.visibility = "hidden";
+document.getElementById("di_"+  Addr_codeY  + "x").style.visibility = "hidden";
+document.getElementById("di_"+  Addr_codeY  + "y").style.visibility = "hidden";
+
+document.getElementById("di_Bx").style.visibility = "hidden";
+document.getElementById("di_By").style.visibility = "hidden";
+
+
+PPT test result
+[sleep interval 1000]
+				idle  : Running		Msg gap
+Mac cpu: 		3.7%  : 16%			/3ms    AVG 3 ms
+ubuntu 3core:	3%    : 12%			/2-7ms
+
+[sleep interval 500]
+				idle   : Running		Msg gap
+Mac thread: 	(4~7)% : 23%		/1-2ms	AVG  1.6452 ms
+ubuntu 3core:	3%     : 15%		/2-4ms
+
+
+[Io Box]
+Build for PHP .so
+
+/usr/local/include/mxio.h
+/usr/local/lib/libmxio.a
+/usr/local/lib/libmxio.so
+/usr/local/lib/libmxio_x64.a
+/usr/local/lib/libmxio_x64.so
+
+https://blog.csdn.net/feisy/article/details/17927713
+
+E2000 / 4200 / 5000 Linux, But 1200 ?
+問：
+1. Trigger 是由 ioLogik 送回還是驅動程式底層 polling , 處理後再triger ?
+2. mobus 不用init , 直接抓ip, Port 直接下FC 指令可以嗎？
+3. E1242 定位表 moxa-iologik-e1200-series-manual-v15.7～p100
+
+Modbus TCP通信標準埠號為502，所有的埠號都是502，
+
+原文網址：https://kknews.cc/tech/bm4gmp6.html
+
+
+https://wiki.winehq.org/Ubuntu_zhcn
+
+错误:8 http://ppa.launchpad.net/wine/wine-builds/ubuntu bionic Release       404  Not Found [IP: 91.189.95.83 80]
+https://blog.csdn.net/qq_44717317/article/details/103192013
+
+
+
+下列的套件有未滿足的相依關係：
+ winehq-stable : 相依關係: wine-stable (= 5.0.0~eoan)
+
+
+====
+base_convert ( string $number , int $frombase , int $tobase ) : string
+
+dechex() - 十进制转换为十六进制
+dechex ( int $number ) : string
+
+hexdec() - 十六进制转换为十进制
+hexdec ( string $hex_string ) : number
+
+decbin() - 十进制转换为二进制
+decbin ( int $number ) : string
+
+bindec() - 二进制转换为十进制
+bindec ( string $binary_string ) : number
+
+pack array ======================================
+$a = array( 65, 66, 67 );
+$packed = pack("c*", ...$a);
+
+BIG trouble......
+in winows , stream_select()
+ STDIN will triger  stream_select() response,
+	but hold on fread , until STDIN keyin.
+
+
+
+https://tecadmin.net/install-wine-on-ubuntu/
+
+https://sourceforge.net/projects/modbuspal/
+Java
+http://easymodbustcp.net/en/

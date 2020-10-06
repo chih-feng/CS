@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="c683ff4e-9965-492c-ab16-ce1ff9fa897e" kpf_version="5" name="WGT-prj.komodoproject">
+<file id="1f21acdb-1758-4e06-a1b8-e2d6f480f946" idref="c683ff4e-9965-492c-ab16-ce1ff9fa897e" name="lib_vd2.inc.php" url="file:///var/www/html/nextcs/_inc/lib_vd2.inc.php">
+</file>
+<file id="2f815727-eded-42b8-88d6-003590c2bc54" idref="c683ff4e-9965-492c-ab16-ce1ff9fa897e" name="vd_wgt1.php" url="vd_wgt1.php">
+</file>
+<file id="2fe99fb9-05e1-49cd-80eb-9d5d551a2824" idref="c683ff4e-9965-492c-ab16-ce1ff9fa897e" name="vd_bcr1.php" url="vd_bcr1.php">
+</file>
+<file id="3fabc04e-656d-49da-b91c-7e8b31ea0f25" idref="c683ff4e-9965-492c-ab16-ce1ff9fa897e" name="VD_WGT1.cfg" url="VD_WGT1.cfg">
+</file>
+<file id="72f46c3a-5c2e-49af-b361-d5ce9b29bcc2" idref="c683ff4e-9965-492c-ab16-ce1ff9fa897e" name="VD_BCR1.cfg" url="VD_BCR1.cfg">
+</file>
+<file id="7d830501-5885-46e6-b12a-53f30e13c1e7" idref="c683ff4e-9965-492c-ab16-ce1ff9fa897e" name="lib_core.inc.php" url="file:///var/www/html/nextcs/_inc/lib_core.inc.php">
+</file>
+<file id="ccf7e23a-859d-4f7f-9aee-07a33abcb6b1" idref="c683ff4e-9965-492c-ab16-ce1ff9fa897e" name="lib_nport.inc.php" url="file:///var/www/html/nextcs/_inc/lib_nport.inc.php">
+</file>
+<preference-set idref="c683ff4e-9965-492c-ab16-ce1ff9fa897e" id="project" preftype="project">
+<preference-set id="Invocations">
+<preference-set id="Project">
+  <string id="cookieparams"></string>
+  <string relative="path" id="cwd"></string>
+  <string id="documentRoot"></string>
+  <string id="executable-params"></string>
+  <string relative="path" id="filename">vd_wgt1.php</string>
+  <string id="getparams"></string>
+  <string id="language">PHP</string>
+  <string id="mpostparams"></string>
+  <string id="params"></string>
+  <string id="postparams"></string>
+  <string id="posttype">application/x-www-form-urlencoded</string>
+  <string id="request-method">GET</string>
+  <boolean id="show-dialog">1</boolean>
+  <boolean id="sim-cgi">0</boolean>
+  <boolean id="use-console">0</boolean>
+  <string id="userCGIEnvironment"></string>
+  <string id="userEnvironment"></string>
+</preference-set>
+</preference-set>
+  <string id="currentInvocationLanguage">PHP</string>
+  <string id="language">PHP</string>
+  <string id="lastInvocation">Project</string>
+  <long id="prefs_version">1</long>
+</preference-set>
+</project>

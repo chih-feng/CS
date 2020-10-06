@@ -1,0 +1,35 @@
+Run Test:
+到 prj_ptw03
+每個指令開一個terminal 來執行。
+這樣可以看執行狀況和下指令。
+
+
+路徑：cd /home/upi/nextcs-master/prj_ptw03
+
+php vd_ioi1.php
+php vd_ioo1.php
+php vd_ptw1.php
+php vd_wss1.php
+php vd_wss2.php
+php vd_ioi.php
+php vd_ioi.php
+
+開啟 Chromium Browser ,
+連到 ptw03/web_ptw_ptm1-4x4.html
+
+MOXA的IP為
+192.168.1.201
+192.168.1.202
+
+所以vm要指定IP: 192.168.1.11
+
+ｄｂ：http://localhost/phpmyadmin/
+
+code:
+update put_list
+set qty_done = 0,
+  status = 0
+  
+  
+  
+   mate-terminal --window -e 'bash -c "cd /home/upi/nextcs-master/prj_ptw03 && php vd_ioo1.php;exec bash"'  --window -e 'bash -c "cd /home/upi/nextcs-master/prj_ptw03 && php vd_ioi1.php;exec bash"'  --window -e 'bash -c "cd /home/upi/nextcs-master/prj_ptw03 && php vd_ptw1.php;exec bash"'  --window -e 'bash -c "cd /home/upi/nextcs-master/prj_ptw03 && php vd_wss1.php;exec bash"'  --window -e 'bash -c "cd /home/upi/nextcs-master/prj_ptw03 && php vd_wss2.php;exec bash"'

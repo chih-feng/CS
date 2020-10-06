@@ -1,0 +1,57 @@
+v1.change qty_toput more than 1
+
+
+PTM1 display alawys blank.
+
+
+
+
+
+
+2. Nbr display --
+
+3.PTM2
+缺貨設定
+	+,- , 確認後，更新NBR, 送出SHT
+
+
+4.PTM3
+
+?Blank number?
+
+5.VM Mate
+ToDo: 解決Mate Mysqli 問題
+
+V 6.播放音效
+	Done
+
+
+7.WSS2 ...
+
+8. VM Mate...  Dev-Env ...
+	mysqli still warning
+	Komodo Xdebud failed...
+	1 hr
+
+	>> reinstall ...
+
+
+
+V 9.RPi Runtime Env.
+	Done, Copy php by download zip.
+	Run jre simulator ok.
+
+10. EDI design (SA/SD/Pg)
+
+
+
+
+
+
+
+
+==============================
+
+
+
+

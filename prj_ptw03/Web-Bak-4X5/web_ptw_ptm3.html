@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <script src="../_inc/jquery-3.4.1.min.js"></script>
+    <script src="../_inc/vd_web.inc.js"></script>
+    <script src="web_ptw_ptm3.js"></script>
+    <title>NextCS 播種牆分撿系統(Mode 3)</title>
+  </head>
+  <body>
+    <table style="width: 100%" border="1">
+      <tbody>
+        <tr>
+          <td style="width: 94.333px;"><br>
+          </td>
+          <td style="width: 1070.33px;" align="center">NextCS 播種牆分撿系統(Mode 3)<br>
+          </td>
+          <td id="td_status" style="width: 115.5px;">
+            <div id="Status"> Status </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table style="width: 100%;" border="1">
+      <tbody>
+        <tr>
+          <td rowspan="2" style="width: 115.133px;" valign="top"> <button name="btnTestIO"
+              id="btnTestIO" onclick="btnTestIO_Click()"> 系統檢查 </button><br>
+            <button name="btnTestEnd" id="btnTestEnd" onclick="btnTestEnd_Click()">完
+              成檢查 </button>
+            <hr> <button name="btnChgWave" id="btnChgWave" onclick="btnChgWave_Click()"
+              disabled="disabled">更改波次 </button><br>
+            ###### <br>
+            <hr> <button name="btnSortBgn" id="btnSortBgn" onclick="btnSortBgn_Click()"
+              disabled="disabled">開始撿貨 </button><br>
+            <button name="btnSortEnd" id="btnSortEnd" onclick="btnSortEnd_Click()"
+              disabled="disabled">完成撿貨 </button>
+            <hr>
+            <div id="divShort"> 缺貨處理<br>
+              <input onclick="buttonSubtract1()" name="subtract1" value="-
+" type="button"> <input size="4" id="edtShort" name="edtShort" value="0" type="text">
+              <input onclick="buttonAdd1()" name="add1" value="+" type="button">
+              <button name="btnShort" id="btnShort" onclick="btnShort_Click()">確
+                定缺貨 </button>
+              <hr> </div>
+            <button name="btnTry" id="btnTry" onclick="btnTry_click()" visible="false">
+              TRY </button> </td>
+          <td style="height: 43px;"><span id="txtForeColor">Barcode: </span><input
+              name="edtBarcode" id="edtBarcode" type="text"> </td>
+        </tr>
+        <tr>
+          <td style="width: 1157.87px;" align="center">
+            <table id="tblNember" style="width: 244px; height: 199px;" border="0">
+              <tbody>
+                <tr>
+                  <td><img id="imgRed_L" src="../_img/Red_off.png" alt="," title="Red_L">
+                  </td>
+                  <td><img id="Num_1x" src="../_img/Digital-8.gif" alt="." title="Num10"><br>
+                  </td>
+                  <td><img id="Num_x1" src="../_img/Digital-0.gif" alt="." title="Num01">
+                  </td>
+                  <td><img id="imgRed_R" src="../_img/Red_off.png" alt="," title="Red_R"><br>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table id="tblGrid" style="width: 80%" border="1">
+              <tbody id="cell_sensor_left" align="center">
+                <tr>
+                  <td><br>
+                  </td>
+                  <td><img id="di_1x" src="../_img/sensor-lite_h.png" alt="." title="."><br>
+                  </td>
+                  <td><img id="di_2x" src="../_img/sensor-lite_h.png" alt="." title=".">
+                  </td>
+                  <td><img id="di_3x" src="../_img/sensor-lite_h.png" alt="." title=".">
+                  </td>
+                  <td><img id="di_4x" src="../_img/sensor-lite_h.png" alt="." title=".">
+                  </td>
+                  <td><img id="di_5x" src="../_img/sensor-lite_h.png" alt="." title=".">
+                  </td>
+                  <td><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td><img id="di_Ax" src="../_img/sensor-lite.png" alt="A" title="A"><br>
+                  </td>
+                  <td><img id="lite_A1" src="../_img/lite_off.png" alt="A1" title="A1"><br>
+                    A1<br>
+                  </td>
+                  <td><img id="lite_A2" src="../_img/lite_off.png" alt="A2" title="A2"><br>
+                    A2<br>
+                  </td>
+                  <td><img id="lite_A3" src="../_img/lite_off.png" alt="A3" title="A3"><br>
+                    A3<br>
+                  </td>
+                  <td><img id="lite_A4" src="../_img/lite_off.png" alt="A4" title="A4"><br>
+                    A4<br>
+                  </td>
+                  <td><img id="lite_A5" src="../_img/lite_off.png" alt="A5" title="A5"><br>
+                    A5<br>
+                  </td>
+                  <td><img id="di_Ay" src="../_img/sensor-lite.png" alt="A" title="A"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td><img id="di_Bx" src="../_img/sensor-lite.png" alt="A" title="A">
+                  </td>
+                  <td><img id="lite_B1" src="../_img/lite_off.png" alt="B1" title="B1"><br>
+                    B1<br>
+                  </td>
+                  <td><img id="lite_B2" src="../_img/lite_off.png" alt="B2" title="B2"><br>
+                    B2<br>
+                  </td>
+                  <td><img id="lite_B3" src="../_img/lite_off.png" alt="B3" title="B3"><br>
+                    B3<br>
+                  </td>
+                  <td><img id="lite_B4" src="../_img/lite_off.png" alt="B4" title="B4"><br>
+                    B4<br>
+                  </td>
+                  <td><img id="lite_B5" src="../_img/lite_off.png" alt="B5" title="B5"><br>
+                    B5<br>
+                  </td>
+                  <td><img id="di_By" src="../_img/sensor-lite.png" alt="A" title="A">
+                  </td>
+                </tr>
+                <tr>
+                  <td><img id="di_Cx" src="../_img/sensor-lite.png" alt="A" title="A">
+                  </td>
+                  <td><img id="lite_C1" src="../_img/lite_off.png" alt="C1" title="C1"><br>
+                    C1<br>
+                  </td>
+                  <td><img id="lite_C2" src="../_img/lite_off.png" alt="C2" title="C2"><br>
+                    C2<br>
+                  </td>
+                  <td><img id="lite_C3" src="../_img/lite_off.png" alt="C3" title="C3"><br>
+                    C3<br>
+                  </td>
+                  <td><img id="lite_C4" src="../_img/lite_off.png" alt="C4" title="C4"><br>
+                    C4<br>
+                  </td>
+                  <td><img id="lite_C5" src="../_img/lite_off.png" alt="C5" title="C5"><br>
+                    C5<br>
+                  </td>
+                  <td><img id="di_Cy" src="../_img/sensor-lite.png" alt="A" title="A">
+                  </td>
+                </tr>
+                <tr>
+                  <td><img id="di_Dx" src="../_img/sensor-lite.png" alt="A" title="A">
+                  </td>
+                  <td><img id="lite_D1" src="../_img/lite_off.png" alt="D1" title="D1"><br>
+                    D1<br>
+                  </td>
+                  <td><img id="lite_D2" src="../_img/lite_off.png" alt="D2" title="D2"><br>
+                    D2<br>
+                  </td>
+                  <td><img id="lite_D3" src="../_img/lite_off.png" alt="D3" title="D3"><br>
+                    D3<br>
+                  </td>
+                  <td><img id="lite_D4" src="../_img/lite_off.png" alt="D4" title="D4"><br>
+                    D4<br>
+                  </td>
+                  <td><img id="lite_D5" src="../_img/lite_off.png" alt="D5" title="D5"><br>
+                    D4<br>
+                  </td>
+                  <td><img id="di_Dy" src="../_img/sensor-lite.png" alt="A" title="A">
+                  </td>
+                </tr>
+                <tr>
+                  <td><br>
+                  </td>
+                  <td><img id="di_1y" src="../_img/sensor-lite_h.png" alt="." title=".">
+                  </td>
+                  <td><img id="di_2y" src="../_img/sensor-lite_h.png" alt="." title=".">
+                  </td>
+                  <td><img id="di_3y" src="../_img/sensor-lite_h.png" alt="." title=".">
+                  </td>
+                  <td><img id="di_4y" src="../_img/sensor-lite_h.png" alt="." title=".">
+                  </td>
+                  <td><img id="di_5y" src="../_img/sensor-lite_h.png" alt="." title=".">
+                  </td>
+                  <td><br>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p><br>
+    </p>
+  </body>
+</html>

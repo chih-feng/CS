@@ -1,0 +1,34 @@
+drop table `ptw03`.`put_list`;
+
+CREATE TABLE `ptw03`.`put_list`(
+    `sid` SERIAL,
+    `barcode`   VARCHAR(30) NOT NULL,
+    `loc_id`    VARCHAR(10) NOT NULL,
+    `qty_toput` INT NOT NULL,
+    `qty_done`  INT NULL default 0 ,
+    `status`    INT NULL default 0 ,
+    `timemark`  datetime  NULL,
+
+    PRIMARY KEY(`sid`),
+    INDEX `idx_barcode`(`barcode`),
+    INDEX `idx_loc_id`(`loc_id`)
+) ENGINE = InnoDB;
+
+--
+
+insert into `ptw03`.`put_list`
+( barcode,  loc_id, qty_toput  )
+values
+( '1234',   'A3',   3),
+( '2345',   'B4',   1),
+( '3456',   'B4',   2),
+( '4567',   'B4',   4),
+( '5678',   'A2',   3),
+( '7890',   'D2',   2),
+( '9012',   'B3',   1),
+( '0123',   'D1',   10),
+( '2468',   'C1',   1),
+( '1357',   'D1',   1)
+
+;
+

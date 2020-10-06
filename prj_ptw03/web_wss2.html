@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <title>NextCS 播種牆分撿系統(WSS 2)</title>
+    <script src="../_inc/jquery-3.4.1.min.js"></script>
+    <script src="../_inc/vd_web.inc.js"></script>
+    <script src="web_wss2.js"></script>
+    <style type="text/css">
+#tdAppName {
+  text-align: center;
+  background-color: #ccccff;
+}
+
+#Status {
+  background-color: #ccccff;
+}
+
+#td_menu {
+  background-color: #ccccff;
+}
+
+#tblNember {
+  background-color: #333333;
+}
+
+#tblGrid {
+  text-align: center;
+  border-color: #cccccc;
+}
+
+#cell_sensor_left {
+  text-align: center;
+}
+
+</style> </head>
+  <body>
+    <div>
+      <table id="tblHead" style="width: 100%" border="0">
+        <tbody>
+          <tr>
+            <td id="td_menu">MENU<br>
+            </td>
+            <td style="width: 921.5px;" id="tdAppName">NextCS PTW分撿系統<br>
+            </td>
+            <td id="td_status" style="width: 115.5px;">
+              <div id="Status"> Status </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div align="center"> <img id="imgRed_L" src="../_img/Red_off.png" alt="," title="Red_L"
+        style="width:10%;margin-bottom:15%;"> <img id="Num_1x" src="../_img/Digital-8.gif"
+        alt="." title="Num10" style="width:30%;"> <img id="Num_x1" src="../_img/Digital-0.gif"
+        alt="." title="Num01" style="width:30%;"> <img id="imgRed_R" src="../_img/Red_off.png"
+        alt="," title="Red_R" style="width:10%;margin-bottom:15%;"> </div>
+    <div id="divDebug">
+      <p>Receive: &nbsp; <input name="txtRecvVD" id="txtRecvVD" value="..."
+          readonly="readonly" type="text"><br>
+        <button name="btnTestVD" onclick="btnTestVDClck()">Test Vd</button> <input
+          name="txtTestVD" id="txtTestVD" value="ALR*" type="text"> </p>
+    </div>
+  </body>
+</html>
